@@ -8,6 +8,7 @@ var cors = require('cors')
 
 var authenticationRouter = require('./routes/authentication/authentication.router');
 var evaluationRouter = require('./routes/form_evaluation/formEvaluation.router');
+var userRouter = require('./routes/user/user.router');
 
 var app = express();
 app.use(cors()) //for cors use
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/v1/authentication', authenticationRouter);
 app.use('/api/v1/evaluation', evaluationRouter);
+app.use('/api/v1/user', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
