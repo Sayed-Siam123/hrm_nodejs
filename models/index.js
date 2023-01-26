@@ -26,6 +26,7 @@ fs
   });
 
 
+db.User = require('./User')(sequelize, Sequelize.DataTypes);
 
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {

@@ -4,14 +4,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors = require('cors')
-const {sequelize, User} = require('./models'); // import models
-
+var cors = require('cors');
 
 var authenticationRouter = require('./routes/authentication/authentication.router');
 var evaluationRouter = require('./routes/form_evaluation/formEvaluation.router');
 var userRouter = require('./routes/user/user.router');
-const users = User.findAll({include:'firstName'});
 var app = express();
 app.use(cors()) //for cors use
 
