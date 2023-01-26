@@ -23,14 +23,16 @@ module.exports = {
       profile_pic: {
         type: Sequelize.STRING
       },
-      createdAt: {
+      // createdAt: false,
+      // updatedAt: false,
+      /*createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      }*/
     });
   },
   async down(queryInterface, Sequelize) {
